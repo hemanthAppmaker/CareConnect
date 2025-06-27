@@ -1,9 +1,9 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeScreen from '../screens/Tabs/HomeScreen';
-import ProfileScreen from '../screens/Tabs/ProfileScreen';
-import Favourite from '../screens/Tabs/FavouriteScreen';
-import Foots from '../screens/Tabs/FootScreen';
+import HomeScreen from '../screens/Tabs/HomeScreen/HomeScreen';
+import ProfileScreen from '../screens/Tabs/ProfileScreen/ProfileScreen';
+import Favourite from '../screens/Tabs/FavouriteScreen/FavouriteScreen';
+import Foots from '../screens/Tabs/FootScreen/FootScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons'; 
 
 const Tab = createBottomTabNavigator();
