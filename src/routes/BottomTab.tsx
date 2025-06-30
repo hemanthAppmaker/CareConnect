@@ -2,7 +2,7 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/Tabs/HomeScreen/HomeScreen';
 import ProfileScreen from '../screens/Tabs/ProfileScreen/ProfileScreen';
-import Favourite from '../screens/Tabs/FavouriteScreen/FavouriteScreen';
+import Appoinments from '../screens/Tabs/FavouriteScreen/FavouriteScreen';
 import Foots from '../screens/Tabs/FootScreen/FootScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons'; 
 
@@ -20,7 +20,7 @@ export default function MyTabs() {
             iconName = focused ? 'file-tray-full-sharp' : 'file-tray-full-outline';
           } else if (route.name === 'Profile') {
             iconName = focused ? 'person' : 'person-outline';
-          } else if (route.name === 'Favourite') {
+          } else if (route.name === 'Appoinments') {
             iconName = focused ? 'heart-sharp' : 'heart-outline';
           } else if (route.name === 'Foots') {
             iconName = focused ? 'flame-sharp' : 'flame-outline';
@@ -36,7 +36,7 @@ export default function MyTabs() {
       })}
     >
       <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Favourite" component={Favourite} />
+      <Tab.Screen name="Appoinments" component={Appoinments} />
       <Tab.Screen name="Foots" component={Foots} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
     </Tab.Navigator>

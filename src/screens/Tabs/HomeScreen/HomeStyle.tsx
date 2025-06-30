@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import Display from '../../../Utils'
+import { StyleSheet } from 'react-native';
+import Display from '../../../Utils';
 
 const styles = StyleSheet.create({
   container: {
@@ -18,14 +18,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   profileImage: {
-    width: 60,
-    height: 60,
+    width: 40,
+    height: 40,
     borderRadius: 50,
     borderWidth: 2,
     borderColor: '#fff',
     position: 'absolute',
-    top: 50,
-    right: 40,
+    top: 20,
+    right: 20,
   },
   textContainer: {
     alignItems: 'flex-start',
@@ -85,58 +85,57 @@ const styles = StyleSheet.create({
     height: 50,
     width: 50,
     borderRadius: 50,
-    marginBottom:20
+    marginBottom: 20,
   },
-  upcomingContainer:{
-    justifyContent:'space-between',
-    alignItems:'center',
-    flexDirection:'row',
-    padding:20,
-    backgroundColor:'#fff'
+  upcomingContainer: {
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexDirection: 'row',
+    padding: 20,
+    backgroundColor: '#fff',
   },
- cardItem2: {
-  flexDirection: 'row',
-  alignItems: 'center',
-  borderBottomColor: '#f2f2f2',
-  borderBottomWidth:2,
-  padding: 10,
-  borderRadius: 10,
-  marginBottom: 10,
-  marginHorizontal:10,
-  justifyContent: 'space-between',
-},
+  cardItem2: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderBottomColor: '#f2f2f2',
+    borderBottomWidth: 2,
+    padding: 10,
+    borderRadius: 10,
+    marginBottom: 10,
+    marginHorizontal: 10,
+    justifyContent: 'space-between',
+  },
 
-alphabetCircle: {
-  width: 50,
-  height: 50,
-  borderRadius: 25,
-  justifyContent: 'center',
-  alignItems: 'center',
-  marginRight: 10,
-},
+  alphabetCircle: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 10,
+  },
 
-alphabetText: {
-  color: '#fff',
-  fontSize: 22,
-  fontWeight: 'bold',
-},
+  alphabetText: {
+    color: '#fff',
+    fontSize: 22,
+    fontWeight: 'bold',
+  },
 
-textSection: {
-  flex: 1,
-  justifyContent: 'center',
-  marginRight: 10,
-},
+  textSection: {
+    flex: 1,
+    justifyContent: 'center',
+    marginRight: 10,
+  },
 
-nameText: {
-  fontSize: 16,
-  fontWeight: '600',
-  color: '#333',
-},
-amountText: {
-  fontSize: 16,
-  fontWeight: 'bold',
-  color: '#000',
-},
-
+  nameText: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#333',
+  },
+  amountText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#000',
+  },
 });
 export default styles;
