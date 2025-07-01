@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "766212204757",
+    "project_id": "careconnect-d3eda",
+    "storage_bucket": "careconnect-d3eda.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766212204757:android:f0e40e1e3a5d6cc3d75a5c",
+        "android_client_info": {
+          "package_name": "com.careconnect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsiiPVE642tZ5EddYt5n96W51z6gm3zMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

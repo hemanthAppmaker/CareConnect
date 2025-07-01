@@ -2,39 +2,28 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import styles from './PersonalInfoStyle';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-
+import { getAuth } from '@react-native-firebase/auth';
+import { CommonActions, useNavigation } from '@react-navigation/native';
+import {Personalhealth} from '../../../../DummyData'
 const PersonalInfo = () => {
-  const data = [
-    {
-      id: 1,
-      icon: 'call-outline',
-      name: 'phone',
-      color: '#bae1ff',
-      content: '+91 98787889',
-    },
-    {
-      id: 2,
-      icon: 'mail-outline',
-      name: 'Email',
-      color: '#f1cbff',
-      content: 'sarah.joshnson@gmail.com',
-    },
-    {
-      id: 3,
-      icon: 'location-outline',
-      name: 'Address',
-      color: '#baffc9',
-      content: '123, Oak street, San Francisco, CA 1902',
-    },
-    {
-      id: 4,
-      icon: 'heart-outline',
-      name: 'Blood Group',
-      color: '#ffb3ba',
-      content: 'O+',
-    },
-  ];
+    const navigation = useNavigation();
 
+const data = Personalhealth
+
+  const logout = async () => {
+    try {
+      await getAuth().signOut();
+
+      navigation.dispatch(
+        CommonActions.reset({
+          index: 0,
+          routes: [{ name: 'LoginScreen' }], // or 'Login' or 'Signup' depending on your flow
+        })
+      );
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
+  };
   return (
     <View>
       <View style={styles.container}>
@@ -64,7 +53,7 @@ const PersonalInfo = () => {
         </View>
       </View>
       <View style={styles.LogoutContianer}>
-        <TouchableOpacity style={styles.Logout}>
+        <TouchableOpacity style={styles.Logout} onPress={logout}>
           <Text style={[styles.MainText, { color: '#808080' }]}>Logout</Text>
         </TouchableOpacity>
       </View>
