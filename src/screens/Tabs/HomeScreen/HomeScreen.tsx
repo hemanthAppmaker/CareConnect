@@ -10,75 +10,11 @@ import {
 } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import styles from './HomeStyle';
-
+import { bottom, top } from '../../../DummyData';
 export default function MyComponent() {
-  const data = [
-    {
-      id: '1',
-      type: 'color',
-      backgroundColor: '#D5D1E9',
-      text: 'Total Sales',
-      amount: '₹4,500',
-      textColor: '#fff',
-      image:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-U_uo6V7nFCh3ppvbXguwLjUwWrE310DYdmOjwIjkBe0EV3KmBgr2zFd28SEoDm8hXg4&usqp=CAU',
-    },
-    {
-      id: '2',
-      type: 'color',
-      backgroundColor: '#D0E4EE',
-      text: 'New Users',
-      amount: '₹1,200',
-      textColor: '#000',
-      image:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-U_uo6V7nFCh3ppvbXguwLjUwWrE310DYdmOjwIjkBe0EV3KmBgr2zFd28SEoDm8hXg4&usqp=CAU',
-    },
-    {
-      id: '3',
-      type: 'color',
-      backgroundColor: '#F3F5A9',
-      text: 'Subscriptions',
-      amount: '₹9,875',
-      textColor: '#000',
-      image:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-U_uo6V7nFCh3ppvbXguwLjUwWrE310DYdmOjwIjkBe0EV3KmBgr2zFd28SEoDm8hXg4&usqp=CAU',
-    },
-  ];
-  const data2 = [
-    {
-      id: '1',
-      type: 'color',
-      backgroundColor: '#acd7e6',
-      title:'Atlassian',
-      text: 'Total Sales',
-      amount: '₹4,500',
-      textColor: '#fff',
-      image:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-U_uo6V7nFCh3ppvbXguwLjUwWrE310DYdmOjwIjkBe0EV3KmBgr2zFd28SEoDm8hXg4&usqp=CAU',
-    },
-    {
-      id: '2',
-      type: 'color',
-      backgroundColor: '#ade6ad',
-      title:'Digital Ocean',
-      text: 'New Users',
-      amount: '₹1,200',
-      textColor: '#000',
-      image:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-U_uo6V7nFCh3ppvbXguwLjUwWrE310DYdmOjwIjkBe0EV3KmBgr2zFd28SEoDm8hXg4&usqp=CAU',
-    },
-    {
-      id: '3',
-      type: 'color',
-      backgroundColor: '#FCE1E4',
-      title:'Feridect',
-      text: 'Subscriptions',
-      amount: '₹9,875',
-      textColor: '#000',
-      image:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-U_uo6V7nFCh3ppvbXguwLjUwWrE310DYdmOjwIjkBe0EV3KmBgr2zFd28SEoDm8hXg4&usqp=CAU',
-    },
-  ];
+  const data = top;
+  const data2 = bottom
+ 
   const itemseparator = () => (
     <View
       style={{

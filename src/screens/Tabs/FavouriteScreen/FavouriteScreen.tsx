@@ -4,10 +4,13 @@ import styles from './FavouriteStyle';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import LinearGradient from 'react-native-linear-gradient';
 import NetInfo from '@react-native-community/netinfo';
-
+import { upcomingAppointments, pastAppointments }  from '../../../DummyData'
 export default function FavouriteScreen() {
   const [isConnected, setIsConnected] = useState<boolean | null>(null);
   const [tab, setTab] = useState('upcoming');
+
+  const appointments = upcomingAppointments;
+const pastAppointment = pastAppointments;
 
   useEffect(() => {
     const unsubscribe = NetInfo.addEventListener(state => {
@@ -20,77 +23,6 @@ export default function FavouriteScreen() {
     setTab(tab);
   };
 
-  const appointments = [
-    {
-      id: 1,
-      name: 'Dr. Kavita Rao',
-      dept: 'Pediatrics',
-      slot: 'Routine Checkup',
-      slottime: '25min',
-      date: 'Tue, July 9',
-      time: '09:00 AM',
-      location: 'City Children Hospital - Room 210',
-      phone: '+91 9812312312',
-    },
-    {
-      id: 2,
-      name: 'Dr. Arjun Deshmukh',
-      dept: 'ENT Specialist',
-      slot: 'Ear Consultation',
-      slottime: '20min',
-      date: 'Wed, July 10',
-      time: '01:45 PM',
-      location: 'Sanjeevani ENT Clinic - Cabin A2',
-      phone: '+91 9887654321',
-    },
-    {
-      id: 3,
-      name: 'Dr. Meera Shah',
-      dept: 'Psychiatry',
-      slot: 'Therapy Session',
-      slottime: '60min',
-      date: 'Fri, July 12',
-      time: '11:00 AM',
-      location: 'MindCare Clinic - Suite 5',
-      phone: '+91 9991234567',
-    },
-  ];
-
-  const pastAppointments = [
-    {
-      id: 4,
-      name: 'Dr. Sarah Johnson',
-      dept: 'Advanced Cardiology',
-      slot: 'Consultation',
-      slottime: '45min',
-      date: 'Mon, June 10',
-      time: '09:30 AM',
-      location: 'Neo Medical Complex - Suite 2045',
-      phone: '+91 9749279723',
-    },
-    {
-      id: 5,
-      name: 'Dr. Rahul Mehta',
-      dept: 'Orthopedic Specialist',
-      slot: 'Follow-up',
-      slottime: '30min',
-      date: 'Thu, June 13',
-      time: '03:15 PM',
-      location: 'Medistar Clinic - Block B, Room 112',
-      phone: '+91 9876543210',
-    },
-    {
-      id: 6,
-      name: 'Dr. Priya Verma',
-      dept: 'Dermatology',
-      slot: 'Skin Checkup',
-      slottime: '20min',
-      date: 'Sat, June 15',
-      time: '12:00 PM',
-      location: 'Glow Skin Center - Cabin 3',
-      phone: '+91 9123456789',
-    },
-  ];
 
   const renderItem = ({ item }: any) => (
     <View style={styles.card}>
@@ -192,7 +124,7 @@ export default function FavouriteScreen() {
       </View>
 
       <FlatList
-        data={tab === 'upcoming' ? appointments : pastAppointments}
+        data={tab === 'upcoming' ? appointments : pastAppointment}
         keyExtractor={item => item.id.toString()}
         renderItem={renderItem}
         contentContainerStyle={{ gap: 10, padding: 10, paddingBottom: 200 }}
