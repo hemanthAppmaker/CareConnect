@@ -18,5 +18,8 @@ buildscript {
         classpath 'com.google.gms:google-services:4.4.3'
     }
 }
-
+project.ext.vectoricons = [
+    iconFontNames: [ 'MaterialIcons.ttf', 'EvilIcons.ttf' ] // Specify font files
+]
 apply plugin: "com.facebook.react.rootproject"
+apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")

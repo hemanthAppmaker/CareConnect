@@ -11,6 +11,19 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
   },
+  titleRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 8,
+    paddingHorizontal: 10,
+  },
+
+  MainText: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#333',
+  },
   backgroundImage: {
     width: '100%',
     height: Display.setHeight(35),
@@ -33,23 +46,14 @@ const styles = StyleSheet.create({
     top: Display.setHeight(15),
     left: 30,
   },
-  MainText: {
-    color: '#D3D3D3',
-    fontSize: 26,
-    fontWeight: 'bold',
-  },
+  // MainText: {
+  //   color: '#D3D3D3',
+  //   fontSize: 26,
+  //   fontWeight: 'bold',
+  // },
   DescText: {
     color: '#808080',
     fontSize: 16,
-  },
-  subText: {
-    color: '#808080',
-    fontSize: 17,
-  },
-  amount: {
-    color: '#DCDCDC',
-    fontSize: 34,
-    fontWeight: 'bold',
   },
   Content: {
     backgroundColor: '#fff',
@@ -63,15 +67,14 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  list: {
-    padding: 8,
+  subText: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#333',
   },
-  card: {
-    height: 170,
-    borderRadius: 20,
-    marginBottom: 16,
-    justifyContent: 'center',
-    paddingHorizontal: 20,
+  list: {
+    paddingHorizontal: 8,
+    paddingBottom: 12,
   },
   cardContent: {
     justifyContent: 'center',
@@ -86,13 +89,6 @@ const styles = StyleSheet.create({
     width: 50,
     borderRadius: 50,
     marginBottom: 20,
-  },
-  upcomingContainer: {
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    flexDirection: 'row',
-    padding: 20,
-    backgroundColor: '#fff',
   },
   cardItem2: {
     flexDirection: 'row',
@@ -136,6 +132,75 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     color: '#000',
+  },
+  card: {
+    borderRadius: 12,
+    padding: 16,
+    marginVertical: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+    elevation: 2, // Android shadow
+    shadowColor: '#000', // iOS shadow
+    shadowOpacity: 0.1,
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 6,
+  },
+  image: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    marginRight: 16,
+  },
+  content: {
+    flex: 1,
+  },
+  title: {
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  amount: {
+    fontSize: 14,
+    fontWeight: '400',
+    marginTop: 4,
+  },
+  section: {
+    marginHorizontal: 16,
+    marginTop: 16,
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    paddingBottom: 8,
+    marginBottom: 12,
+    shadowColor: '#000',
+    shadowOpacity: 0.05,
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 4,
+    elevation: 2,
+  },
+  upcomingContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: '#eee',
+  },
+  emptyText: {
+    textAlign: 'center',
+    paddingVertical: 20,
+    color: 'gray',
+    fontSize: 14,
+  },
+  contentSection: {
+    backgroundColor: '#fff',
+    padding: 16,
+    borderRadius: 16,
+    margin: 16,
+    elevation: 2,
+  },
+  rightSection: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
 });
 export default styles;
